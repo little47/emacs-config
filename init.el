@@ -142,6 +142,15 @@
       (require 'fill-column-indicator)
       (fci-mode 1))
   )
+
+(use-package buffer-move
+  :ensure t
+  :config
+  (global-set-key (kbd "<C-S-up>")     'buf-move-up)
+  (global-set-key (kbd "<C-S-down>")   'buf-move-down)
+  (global-set-key (kbd "<C-S-left>")   'buf-move-left)
+  (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+)
 				
 ;; move between windows
 (global-set-key (kbd "C-x <up>") 'windmove-up)
@@ -152,3 +161,17 @@
 ;; fix utf-8 encoding
 (define-coding-system-alias 'UTF-8 'utf-8)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (buffer-move solarized-theme nyan-mode use-package toml-mode sr-speedbar spacemacs-theme sml-mode pdf-tools multiple-cursors helm-gtags flycheck fill-column-indicator evil dumb-jump company color-theme-sanityinc-tomorrow auto-complete))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
