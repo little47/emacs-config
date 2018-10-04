@@ -108,7 +108,11 @@
   :ensure t
   :config
   (require 'sr-speedbar)
-  (setq speedbar-show-unknown-files t))
+  (setq speedbar-show-unknown-files t)
+  (if (not (string-equal user-login-name "ryro"))
+      (setq sr-speedbar-right-side nil)
+    )
+)
 
 ;; company
 (use-package company
